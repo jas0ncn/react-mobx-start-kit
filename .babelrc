@@ -1,0 +1,21 @@
+{
+    "presets": ["react", "env"],
+    "env": {
+        "development": {
+            "plugins": [
+                "mobx-deep-action",
+                [
+                    "react-transform",
+                    {
+                        "transforms": [
+                            {
+                                "transform": "react-transform-catch-errors",
+                                "imports": [ "react", "redbox-react" ]
+                            }
+                        ]
+                    }
+                ]
+            ]
+        }
+    }
+}
