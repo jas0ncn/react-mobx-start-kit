@@ -81,5 +81,6 @@ module.exports = {
     ],
     resolve: {
         extensions: ['.jsx', '.js', '.tsx', '.ts', '.css']
-    }
+    },
+    mode: 'production'
 };

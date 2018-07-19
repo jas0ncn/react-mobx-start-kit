@@ -3,16 +3,14 @@ const path = require('path');
 const utils = require('./utils');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const commonEntry = 'webpack-hot-middleware/client?path=http://localhost:8086/__webpack_hmr&reload=true';
-
 module.exports = {
     entry: {
-        main: [commonEntry, './src/index.tsx']
+        main: ['./src/index.tsx']
     },
     module: {
         rules: [{
             test: /\.(ts|tsx)(\?.*)?$/,
-            use: ['react-hot-loader/webpack', 'babel-loader', 'awesome-typescript-loader']
+            use: ['babel-loader', 'awesome-typescript-loader']
         }, {
             test: /\.less$/,
             use: [
@@ -48,5 +46,6 @@ module.exports = {
     ],
     resolve: {
         extensions: ['.jsx', '.js', '.tsx', '.ts', '.css']
-    }
+    },
+    mode: 'development'
 };
